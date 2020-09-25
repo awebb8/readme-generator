@@ -53,7 +53,6 @@ const questions = [
 ];
 
 inquirer.prompt(questions).then(function(response) {
-  console.log(response);
 
   writeToFile(response);
 
