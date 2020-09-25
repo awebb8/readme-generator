@@ -11,7 +11,7 @@ const questions = [
     },
     {
       type: "input",
-      message: "What is your github username",
+      message: "What is your github username?",
       name: "username"
     },
     {
@@ -22,66 +22,48 @@ const questions = [
     {
       type: "input",
       message: "How does the user install?",
-      name: "installation",
+      name: "installation"
     },
     {
       type: "input",
       message: "How is the site or file used?",
-      name: "usage",
+      name: "usage"
     },
     {
-      type: "input",
-      message: "What is the associated license?",
+      type: "checkbox",
+      message: "What license(s)?",
       name: "license",
+      choices: ["GNU_AGPLv3", "Mozilla_Public__2.0", "Apache_2.0", "MIT"]
     },
     {
       type: "input",
       message: "How can others contribute?",
-      name: "contributing",
+      name: "contributing"
     },
     {
       type: "input",
       message: "What tests have been completed?",
-      name: "tests",
+      name: "tests"
     },
     {
       type: "input",
-      message: "What tests have been completed?",
-      name: "tests",
-    },
-    {
-      type: "input",
-      message: "Where can people direct questions to?",
-      name: "questions"
+      message: "What is your email address?",
+      name: "email"
     }
 ];
 
 inquirer.prompt(questions).then(function(response) {
   console.log(response);
 
-writeToFile(response);
+  writeToFile(response);
 
 });
 
-  // function to write README file
-  function writeToFile(data) {
-      fs.writeFile("README.md", genMarkdown.generateMarkdown(data), err=>{
-          if (err) {
+// function to write README file
+function writeToFile(data) {
+    fs.writeFile("README.md", genMarkdown.generateMarkdown(data), err => {
+        if (err) {
             throw err;
-          }
-      
-      });
-  }
-
-// function to initialize program
-// function init() {
-// }
-
-// function call to initialize program
-// init();
-
-
-// WRITE function for download of inquirer??
-    // So that anyone can pull this from github and use it
-
-// Does there need to be an option for if you don't want to input data for any of these sections?
+        }
+    });
+}
