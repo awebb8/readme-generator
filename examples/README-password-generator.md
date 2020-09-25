@@ -19,7 +19,7 @@
   * [Questions](#Questions)
 
   ## Installation
-  Clone the respository using the link above to the GitHub repository
+  Clone the repository using the link above to the GitHub repository
 
   ## Usage
   View the HTML page in the browser or click on the link above to the deployed site. Click the "Generate Password" button to generate a password.
