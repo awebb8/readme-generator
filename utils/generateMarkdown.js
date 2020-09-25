@@ -36,7 +36,7 @@ function generateMarkdown(data) {
   ${data.tests}
 
   ## Questions
-  Please direct all questions to ${data.email}
+  Please direct all questions to [${data.email}](${data.email})
   You may view and follow my GitHub profile by clicking the following link: https://github.com/${data.username}
 `;
 }
